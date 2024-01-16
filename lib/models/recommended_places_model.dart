@@ -23,16 +23,7 @@ class RecommendedPlaceModel {
 }
 
 List<RecommendedPlaceModel> recommendedPlaces = [
-  RecommendedPlaceModel(
-    image: "assets/places/Assekrem.jpg",
-    bgColor: const Color.fromARGB(255, 217, 179, 121),
-    title: 'Assekrem',
-    location: 'Tamanrasset',
-    rating: 3.8,
-    category: 'Mountains',
-    description:
-        '''Assekrem is a high plateau in the Hoggar Mountains of southern Algeria. Rising from the larger Atakor plateau,Assekrem is within Ahaggar National Park.The maximum altitude of the plateau is 2,726 metres (8,944 ft). The hermitage of Charles de Foucauld, which continues to be inhabited by a few monks, is at the top of the Assekrem plateau.''',
-  ),
+
   RecommendedPlaceModel(
     image: "assets/places/mosq.jpg",
     bgColor: const Color.fromARGB(255, 194, 162, 75),
@@ -72,5 +63,15 @@ List<RecommendedPlaceModel> recommendedPlaces = [
     category: 'Religious Sites',
     description:
         '''La mosquée Émir Abdelkader (en arabe: مسجد الأمير عبد القادر, en tamazight : ⵜⴰⵎⵣⴳⵉⴷⴰ ⵏ ⵍⵉⵎⵉⵔ ⵄⴱⴷⴰⵍⵇⴰⴷⵔ) est une mosquée algérienne située à Constantine, dans le quartier Émir Abdelkader d'où l'appellation. Cet édifice religieux pouvant accueillir jusqu'à 19 000 personnes, et s’étend sur une superficie totale de 13 hectares, englobant la mosquée ainsi que les bâtiments de l’université islamique. En 1984, l'Université islamique rattachée à la mosquée a été inaugurée, et l'ouverture de la mosquée a été retardée jusqu'à 1994. La mosquée est à la fois un lieu de prière et une université pour l'enseignement des sciences islamiques. Elle comporte deux minarets de 107 mètres chacun''',
+  ),
+    RecommendedPlaceModel(
+    image: "assets/places/Assekrem.jpg",
+    bgColor: const Color.fromARGB(255, 217, 179, 121),
+    title: 'Assekrem',
+    location: 'Tamanrasset',
+    rating: 3.8,
+    category: 'Mountains',
+    description:
+        '''Assekrem is a high plateau in the Hoggar Mountains of southern Algeria. Rising from the larger Atakor plateau,Assekrem is within Ahaggar National Park.The maximum altitude of the plateau is 2,726 metres (8,944 ft). The hermitage of Charles de Foucauld, which continues to be inhabited by a few monks, is at the top of the Assekrem plateau.''',
   ),
 ];
