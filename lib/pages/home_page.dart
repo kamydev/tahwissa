@@ -20,9 +20,7 @@ class _HomePageState extends State<HomePage> {
   final TextEditingController _searchController = TextEditingController();
 
   void _onItemTapped(int index) {
-    setState(() {
-      _currentIndex = index;
-    });
+    setState(() => _currentIndex = index);
 
     // Add logic to navigate to different pages based on the index
     switch (_currentIndex) {
@@ -77,7 +75,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.blueGrey.shade500,
       appBar: AppBar(
         toolbarHeight: 80,
         elevation: 0,
@@ -107,7 +105,7 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
             const SizedBox(width: 20),
-            Image.asset('assets/icons/tahwissaLogo.png', width: 55),
+            Image.asset('assets/tahwissaLogo.png', width: 55),
           ],
         ),
         actions: [
@@ -148,7 +146,7 @@ class _HomePageState extends State<HomePage> {
         children: [
           if (_isSearchVisible)
             Container(
-              color: const Color(0xFF37c4ee),
+              color: Colors.white,
               child: Padding(
                 padding: const EdgeInsets.all(14),
                 child: Container(

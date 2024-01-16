@@ -17,7 +17,7 @@ class RecommendedPlaces extends StatelessWidget {
             return SizedBox(
               width: 220,
               child: Card(
-                color: const Color.fromARGB(255, 0, 81, 106),
+                color: const Color.fromARGB(255, 167, 187, 196),
                 elevation: 0.4,
                 shape: const RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(
@@ -37,6 +37,7 @@ class RecommendedPlaces extends StatelessWidget {
                             myDescription: recommendedPlaces[index].description,
                             myCategory : recommendedPlaces[index].category,
                             myRating: '${recommendedPlaces[index].rating}',
+                            myBgColor: recommendedPlaces[index].bgColor ?? Colors.deepPurple.shade900 ,
                           ),
                         ));
                   },
@@ -61,7 +62,7 @@ class RecommendedPlaces extends StatelessWidget {
                               style: const TextStyle(
                                 fontSize: 11,
                                 fontWeight: FontWeight.bold,
-                                color: Colors.white
+                                color: Colors.black
                               ),
                             ),
                             const Spacer(),
@@ -74,7 +75,7 @@ class RecommendedPlaces extends StatelessWidget {
                               '${recommendedPlaces[index].rating}',
                               style: const TextStyle(
                                 fontSize: 12,
-                                color: Colors.white,
+                                color: Colors.black,
                               ),
                             )
                           ],
@@ -84,13 +85,13 @@ class RecommendedPlaces extends StatelessWidget {
                           children: [
                             const Icon(
                               Ionicons.location,
-                              color: Colors.white,
+                              color: Colors.black,
                               size: 16,
                             ),
                             const SizedBox(width: 5),
                             Text(
                               recommendedPlaces[index].location,
-                              style: const TextStyle(fontSize: 12,color: Colors.white,),
+                              style: const TextStyle(fontSize: 12,color: Colors.black,),
                             )
                           ],
                         )

@@ -10,32 +10,42 @@ class WelcomePage extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             image: DecorationImage(
-                image: const AssetImage('assets/places/Background.jpg'),
-                fit: BoxFit.cover,
-                opacity: 0.78,
-                colorFilter: ColorFilter.mode(Colors.blue.shade300,BlendMode.darken )),
+              image: AssetImage('assets/places/seraidi.JPG'),
+              fit: BoxFit.cover,
+              opacity: 0.78,
+              colorFilter: ColorFilter.mode(
+                  Color.fromARGB(255, 73, 73, 73), BlendMode.overlay),
+            ),
           ),
           child: Center(
             child: Padding(
               padding: const EdgeInsets.all(16),
               child: Column(
                 children: [
-                  const SizedBox(height: 200),
-                  Image.asset('assets/icons/tahwissaLogo.png',scale: 100,),
-                  const SizedBox(height: 30),
+                  const SizedBox(height: 220),
+                  Image.asset(
+                    'assets/tahwissaLogo.png',
+                    scale: 100,
+                  ),
+                  const SizedBox(height: 20),
                   const Text(
                     "Welcome to TAHWISSA",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      color: Colors.white,
+                        color: Colors.white,
                         fontSize: 27,
                         fontWeight: FontWeight.bold,
                         // fontFamily: 'Montserrat',
                         fontFamily: 'Cabin',
-                        letterSpacing : 1.6 ,
-                        ),
+                        letterSpacing: 1.6,
+                        shadows: [
+                          Shadow(
+                              blurRadius: 4.0,
+                              color: Colors.black,
+                              offset: Offset(2.0, 2.0))
+                        ]),
                   ),
                   const SizedBox(height: 5),
                   const Text(
@@ -43,11 +53,16 @@ class WelcomePage extends StatelessWidget {
                     "Discover the magnificent places in Algeria \nand plan your trip.",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                        fontWeight : FontWeight.w500,
-                      color: Colors.white,
-                      fontSize: 16,
-                      letterSpacing: 1.1
-                    ),
+                        fontWeight: FontWeight.w500,
+                        color: Colors.white,
+                        fontSize: 16,
+                        letterSpacing: 1.1,
+                        shadows: [
+                          Shadow(
+                              blurRadius: 4.0,
+                              color: Colors.black,
+                              offset: Offset(2.0, 2.0))
+                        ]),
                   ),
                   const Spacer(),
                   Padding(
@@ -76,10 +91,9 @@ class WelcomePage extends StatelessWidget {
                         child: const Text(
                           "Get Started",
                           style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            letterSpacing: 1.5 ,
-                            fontSize: 16
-                          ),
+                              fontWeight: FontWeight.bold,
+                              letterSpacing: 1.5,
+                              fontSize: 16),
                         ),
                       ),
                     ),

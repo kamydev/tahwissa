@@ -14,13 +14,13 @@ class Distance extends StatelessWidget {
       children: [
         const Icon(
           Ionicons.locate_outline,
-          color: Colors.white,
+          color: Colors.black,
           size: 14,
         ),const SizedBox(width: 5),
         const Text(
           'Constantine',
           style: TextStyle(
-            color: Colors.white,
+            color: Colors.black,
           ),
         ),
         const SizedBox(width: 5),
@@ -39,13 +39,13 @@ class Distance extends StatelessWidget {
         const Icon(
           Ionicons.location_outline,
           size: 14,
-          color: Colors.white,
+          color: Colors.black,
         ),
         const SizedBox(width: 2),
         const Text(
           'Algiers',
           style: TextStyle(
-            color: Colors.white,
+            color: Colors.black,
           ),
         )
       ],

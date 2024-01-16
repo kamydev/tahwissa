@@ -15,12 +15,12 @@ class TouristPlaces extends StatelessWidget {
           return Chip(
             label: Text(
               touristPlaces[index].name,
-              style: const TextStyle(color: Colors.white),
+              style: const TextStyle(color: Colors.black,fontStyle: FontStyle.italic),
             ),
             avatar: CircleAvatar(
               backgroundImage: AssetImage(touristPlaces[index].image),
             ),
-            backgroundColor: const Color.fromARGB(255, 0, 137, 179),
+            backgroundColor: const Color.fromARGB(255, 167, 187, 196),
             elevation: 0.4,
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),

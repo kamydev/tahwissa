@@ -1,4 +1,4 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first, unnecessary_brace_in_string_interps
+// ignore_for_file: public_member_api_docs, sort_constructors_first, unnecessary_brace_in_string_interps, must_be_immutable
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:travel_app/widgets/distance.dart';
@@ -12,8 +12,10 @@ class TouristDetailsPage extends StatelessWidget {
     required this.myRating,
     required this.myDescription,
     required this.myCategory,
+    required this.myBgColor,
   }) : super(key: key);
   final String image;
+  final Color myBgColor;
   final String myTitle;
   final String mySubtitle;
   final String myRating;
@@ -23,6 +25,7 @@ class TouristDetailsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Scaffold(
+      backgroundColor: myBgColor,
       body: SafeArea(
         child: ListView(
           padding: const EdgeInsets.all(10),
@@ -35,6 +38,7 @@ class TouristDetailsPage extends StatelessWidget {
                 children: [
                   Container(
                     decoration: BoxDecoration(
+                      color: Colors.black,
                       borderRadius: const BorderRadius.vertical(
                           bottom: Radius.circular(20)),
                       image: DecorationImage(
@@ -92,11 +96,11 @@ class TouristDetailsPage extends StatelessWidget {
                         style:
                             const TextStyle(fontSize: 24, fontFamily: 'Cabin')),
                     const SizedBox(height: 5),
-                    Text('Wilaya : ${mySubtitle}',
+                    Text('Wilaya : $mySubtitle',
                         style:
                             const TextStyle(fontSize: 16, fontFamily: 'Cabin')),
                     const SizedBox(width: 10),
-                    Text('Category : ${myCategory}',
+                    Text('Category : $myCategory',
                         style:
                             const TextStyle(fontSize: 16, fontFamily: 'Cabin')),
                   ],
@@ -141,15 +145,23 @@ class TouristDetailsPage extends StatelessWidget {
                 alignment: AlignmentDirectional.center,
                 child: Text(myDescription,
                     style: const TextStyle(fontFamily: 'Cabin', fontSize: 16))),
+            const SizedBox(height: 15),
+            Container(
+              alignment: Alignment.centerLeft,
+              child: const Text(
+                'My Current Location',
+                style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+              ),
+            ),
             const SizedBox(height: 20),
             Container(
-              height: 180,
+              height: 280,
               width: double.maxFinite,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15),
                 color: Theme.of(context).colorScheme.secondary.withOpacity(0.1),
                 image: const DecorationImage(
-                  image: AssetImage('assets/map.png'),
+                  image: AssetImage('assets/places/mapTaHaider.png'),
                   fit: BoxFit.cover,
                 ),
               ),

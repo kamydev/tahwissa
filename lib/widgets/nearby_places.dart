@@ -17,7 +17,7 @@ class NearbyPlaces extends StatelessWidget {
             height: 135,
             width: double.maxFinite,
             child: Card(
-              color: const Color.fromARGB(255, 0, 81, 106),
+              color: const Color.fromARGB(255, 167, 187, 196),
               elevation: 0.4,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),
@@ -35,6 +35,7 @@ class NearbyPlaces extends StatelessWidget {
                           myDescription: nearbyPlaces[index].description,
                           myCategory: nearbyPlaces[index].category,
                           myRating: '${nearbyPlaces[index].rating}',
+                          myBgColor: nearbyPlaces[index].bgColor,
                         ),
                       ));
                 },
@@ -60,15 +61,15 @@ class NearbyPlaces extends StatelessWidget {
                               nearbyPlaces[index].title,
                               style: const TextStyle(
                                 fontFamily: 'Cabin',
-                                color: Colors.white,
+                                color: Colors.black,
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
                             Text(nearbyPlaces[index].subTitle,
                                 style: const TextStyle(
-                                fontFamily: 'Cabin',
-                                  color: Colors.white,
+                                  fontFamily: 'Cabin',
+                                  color: Colors.black,
                                 )),
                             const SizedBox(height: 10),
                             // DISTANCE WIDGET
@@ -85,7 +86,7 @@ class NearbyPlaces extends StatelessWidget {
                                   '${nearbyPlaces[index].rating}',
                                   style: const TextStyle(
                                     fontSize: 12,
-                                    color: Colors.white,
+                                    color: Colors.black,
                                   ),
                                 ),
                                 const Spacer(),
@@ -93,14 +94,14 @@ class NearbyPlaces extends StatelessWidget {
                                   text: TextSpan(
                                       style: const TextStyle(
                                         fontSize: 20,
-                                        color: Colors.white,
+                                        color: Colors.black,
                                       ),
                                       text: nearbyPlaces[index].price,
                                       children: const [
                                         TextSpan(
                                             style: TextStyle(
                                               fontSize: 12,
-                                              color: Colors.white,
+                                              color: Colors.black,
                                             ),
                                             text: " /Person")
                                       ]),

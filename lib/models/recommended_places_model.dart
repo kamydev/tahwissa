@@ -1,4 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+
+import 'package:flutter/material.dart';
+
 class RecommendedPlaceModel {
   final String title;
   final String image;
@@ -6,6 +9,7 @@ class RecommendedPlaceModel {
   final String location;
   final String description;
   final String category;
+  Color? bgColor;
   RecommendedPlaceModel({
     required this.title,
     required this.image,
@@ -13,12 +17,15 @@ class RecommendedPlaceModel {
     required this.location,
     required this.description,
     required this.category,
+    required this.bgColor,
+    // this.bgColor = Colors.white,
   });
 }
 
 List<RecommendedPlaceModel> recommendedPlaces = [
   RecommendedPlaceModel(
     image: "assets/places/Assekrem.jpg",
+    bgColor: const Color.fromARGB(255, 217, 179, 121),
     title: 'Assekrem',
     location: 'Tamanrasset',
     rating: 3.8,
@@ -28,6 +35,7 @@ List<RecommendedPlaceModel> recommendedPlaces = [
   ),
   RecommendedPlaceModel(
     image: "assets/places/mosq.jpg",
+    bgColor: const Color.fromARGB(255, 194, 162, 75),
     title: 'The Great Mosque of Algiers',
     location: 'Algiers',
     rating: 4.8,
@@ -37,6 +45,7 @@ List<RecommendedPlaceModel> recommendedPlaces = [
   ),
   RecommendedPlaceModel(
     image: "assets/places/kasbah.jpg",
+    bgColor: const Color.fromARGB(255, 167, 187, 196),
     title: 'Kasbah of Algiers',
     location: 'Algiers',
     rating: 4.0,
@@ -45,14 +54,8 @@ List<RecommendedPlaceModel> recommendedPlaces = [
         '''The Kasbah is a unique kind of medina, or Islamic city. It stands in one of the finest coastal sites on the Mediterranean, overlooking the islands where a Carthaginian trading-post was established in the 4th century BC. There are the remains of the citadel, old mosques and Ottoman-style palaces as well as the remains of a traditional urban structure associated with a deep-rooted sense of community.''',
   ),
   RecommendedPlaceModel(
-      title: 'Tombeau de la Chrétienne',
-      image: "assets/places/Tipaza.jpg",
-      location: "Tipaza",
-      rating: 4.4,
-      category: '',
-      description: '''Description'''),
-  RecommendedPlaceModel(
     image: "assets/places/monument.jpg",
+    bgColor: const Color.fromARGB(255, 196, 173, 109),
     title: 'Monument Aux Morts',
     location: 'Constantine',
     rating: 4.0,
@@ -62,6 +65,7 @@ List<RecommendedPlaceModel> recommendedPlaces = [
   ),
   RecommendedPlaceModel(
     image: "assets/places/ElAmir.jpg",
+    bgColor: const Color.fromARGB(255, 172, 120, 82),
     title: 'Emir Abdelkader Mosquée',
     location: 'Constantine',
     rating: 4.8,
