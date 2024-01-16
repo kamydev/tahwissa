@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:travel_app/pages/home_page.dart';
+import 'package:travel_app/pages/my_bookmark.dart';
+import 'package:travel_app/pages/my_notification.dart';
 import 'singin_page.dart';
 
 //import 'package:firebase_core/firebase_core.dart';
@@ -20,23 +22,29 @@ class _LoginState extends State<Login> {
 }*/
   void _onItemTapped(int index) {
     setState(() => _currentIndex = index);
-
-    // Add logic to navigate to different pages based on the index
     switch (_currentIndex) {
       case 0:
-        tohome();
+        toHome();
         break;
       case 1:
-        tohome();
+        toBookmark();
         break;
       case 2:
-        tologin();
-
+        toLogin();
         break;
     }
   }
 
-  void tologin() {
+  void toNotification() {
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const myNotification(),
+      ),
+    );
+  }
+
+  void toLogin() {
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(
@@ -45,7 +53,16 @@ class _LoginState extends State<Login> {
     );
   }
 
-  void tohome() {
+  void toBookmark() {
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const Bookmark.Bookmark(),
+      ),
+    );
+  }
+
+  void toHome() {
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(

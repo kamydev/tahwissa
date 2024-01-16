@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\DZKAM\\Pictures\\Tahwissa-main\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "C:\\Users\\DZKAM\\Documents\\Informatik\\Licence 3\\MOBILE\\Tahwissa-main\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\DZKAM\\Pictures\\Tahwissa-main\\android\\app\\src\\main\\res\\values\\colors.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "57",
-                        "endColumns": "56",
-                        "endOffsets": "109"
-                    },
-                    "to": {
-                        "startLines": "13",
-                        "startColumns": "4",
-                        "startOffsets": "611",
-                        "endColumns": "56",
-                        "endOffsets": "663"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\DZKAM\\Pictures\\Tahwissa-main\\android\\app\\src\\main\\res\\values\\styles.xml",
+                    "source": "C:\\Users\\DZKAM\\Documents\\Informatik\\Licence 3\\MOBILE\\Tahwissa-main\\android\\app\\src\\main\\res\\values\\styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
@@ -37,6 +20,23 @@
                         "endLines": "98,101",
                         "endColumns": "12,12",
                         "endOffsets": "5822,5991"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\DZKAM\\Documents\\Informatik\\Licence 3\\MOBILE\\Tahwissa-main\\android\\app\\src\\main\\res\\values\\colors.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "57",
+                        "endColumns": "56",
+                        "endOffsets": "109"
+                    },
+                    "to": {
+                        "startLines": "13",
+                        "startColumns": "4",
+                        "startOffsets": "611",
+                        "endColumns": "56",
+                        "endOffsets": "663"
                     }
                 },
                 {

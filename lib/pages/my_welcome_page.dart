@@ -107,27 +107,3 @@ class WelcomePage extends StatelessWidget {
     );
   }
 }
-
-
-// Image.asset('assets/places/seraidi.JPG',width: 80)
-
-// import 'package:flutter/material.dart';
-
-// class MyApp extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       home: Scaffold(
-//         body: Container(
-//           decoration: BoxDecoration(
-//             image: DecorationImage(
-//               image: AssetImage('assets/your_image.jpg'),   // Replace with your image path
-//               fit: BoxFit.cover,         // Adjust as needed
-//             ),
-//           ),
-//           child: // Your app content here
-//         ),
-//       ),
-//     );
-//   }
-// }

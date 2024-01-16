@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ionicons/ionicons.dart';
+import 'package:travel_app/pages/my_bookmark.dart';
+import 'package:travel_app/pages/my_notification.dart';
 import 'login_page.dart';
 import 'home_page.dart';
 
@@ -14,16 +16,16 @@ class signin extends StatefulWidget {
 }
 
 class _signinState extends State<signin> {
-  int _currentIndex = 0;
+  int _currentIndex = 2;
+
   void _onItemTapped(int index) {
     setState(() => _currentIndex = index);
-    // Add logic to navigate to different pages based on the index
     switch (_currentIndex) {
       case 0:
         toHome();
         break;
       case 1:
-        toHome();
+        toBookmark();
         break;
       case 2:
         toLogin();
@@ -31,14 +33,40 @@ class _signinState extends State<signin> {
     }
   }
 
+  void toNotification() {
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const myNotification(),
+      ),
+    );
+  }
+
   void toLogin() {
     Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => const Login()));
+      context,
+      MaterialPageRoute(
+        builder: (context) => const Login(),
+      ),
+    );
+  }
+
+  void toBookmark() {
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const Bookmark.Bookmark(),
+      ),
+    );
   }
 
   void toHome() {
     Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => const HomePage()));
+      context,
+      MaterialPageRoute(
+        builder: (context) => const HomePage(),
+      ),
+    );
   }
 
   @override

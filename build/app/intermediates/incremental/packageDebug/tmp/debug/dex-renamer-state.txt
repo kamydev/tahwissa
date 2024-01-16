@@ -1,4 +1,4 @@
-#Fri Jan 12 17:20:27 GMT+01:00 2024
-base.0=C\:\\Users\\DZKAM\\Pictures\\Tahwissa-main\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+#Tue Jan 16 22:43:06 GMT+01:00 2024
+base.0=C\:\\Users\\DZKAM\\Documents\\Informatik\\Licence 3\\MOBILE\\Tahwissa-main\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
-import 'package:travel_app/pages/Bookmark.dart';
+import 'package:travel_app/pages/my_bookmark.dart';
 import 'package:travel_app/pages/my_notification.dart';
 import 'package:travel_app/widgets/nearby_places.dart';
 import 'package:travel_app/widgets/recommended_places.dart';
@@ -21,22 +21,20 @@ class _HomePageState extends State<HomePage> {
 
   void _onItemTapped(int index) {
     setState(() => _currentIndex = index);
-
-    // Add logic to navigate to different pages based on the index
     switch (_currentIndex) {
       case 0:
-        tohome();
+        toHome();
         break;
       case 1:
-        tobookmark();
+        toBookmark();
         break;
       case 2:
-        tologin();
+        toLogin();
         break;
     }
   }
 
-  void tonotification() {
+  void toNotification() {
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(
@@ -45,7 +43,7 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  void tologin() {
+  void toLogin() {
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(
@@ -54,7 +52,7 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  void tobookmark() {
+  void toBookmark() {
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(
@@ -63,7 +61,7 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  void tohome() {
+  void toHome() {
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(
@@ -88,7 +86,7 @@ class _HomePageState extends State<HomePage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "TAHWISSSA",
+                  "TAHWISSA",
                   style: TextStyle(
                       fontSize: 23,
                       fontFamily: 'Cabin',
@@ -104,7 +102,7 @@ class _HomePageState extends State<HomePage> {
                 )
               ],
             ),
-            const SizedBox(width: 20),
+            const SizedBox(width: 30),
             Image.asset('assets/tahwissaLogo.png', width: 55),
           ],
         ),
@@ -137,7 +135,7 @@ class _HomePageState extends State<HomePage> {
             padding: const EdgeInsets.only(left: 8.0, right: 12),
             child: IconButton(
               icon: const Icon(Ionicons.notifications_outline),
-              onPressed: tonotification,
+              onPressed: toNotification,
             ),
           ),
         ],
@@ -146,11 +144,11 @@ class _HomePageState extends State<HomePage> {
         children: [
           if (_isSearchVisible)
             Container(
-              color: Colors.white,
+              color: Colors.blueGrey.shade500,
               child: Padding(
                 padding: const EdgeInsets.all(14),
                 child: Container(
-                  color: Colors.white,
+                  color: Colors.blueGrey.shade500,
                   child: TextField(
                     controller: _searchController,
                     decoration: InputDecoration(
